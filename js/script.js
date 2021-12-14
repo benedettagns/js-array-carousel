@@ -32,6 +32,7 @@ nextTitle.addEventListener('click', function () {
     }
 
     titleSlider.innerHTML = titleText[currentIndex];
+    textSlider.innerHTML = slideTexts[currentIndex];
 })
 
 prevTitle.addEventListener('click', function () {
@@ -40,5 +41,7 @@ prevTitle.addEventListener('click', function () {
     if (currentIndex > titleText.length - 1) {
         currentIndex = 0;
     }
+    
     titleSlider.innerHTML = titleText[currentIndex];
+    textSlider.innerHTML = slideTexts[currentIndex];
 })
