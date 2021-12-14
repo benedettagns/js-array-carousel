@@ -5,9 +5,22 @@
 }
 
 .slider {
+    background-color: whitesmoke;
+    text-align: center;
+    padding: 40px;
     width: 700px;
     height: 500px;
     border: 1px solid grey ;
+}
+
+.title {
+    font-family: 'Bakbak One', cursive;
+    padding: 80px;
+    font-size: 35px;
+}
+
+.text {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #next {
