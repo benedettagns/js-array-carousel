@@ -14,36 +14,31 @@ const slideTexts = [
 
 let currentIndex = 0;
 
-const titleSlider = document.querySelector('.slider');
+const titleSlider = document.querySelector('.title');
+const textSlider = document.querySelector('.text');
 
 titleSlider.innerHTML = titleText[0];
+textSlider.innerHTML = slideTexts[0];
 
+//button
 const nextTitle = document.getElementById('next');
 const prevTitle = document.getElementById('prev');
 
 nextTitle.addEventListener('click', function () {
     currentIndex++;
+
+    if (currentIndex > titleText.length - 1) {
+        currentIndex = 0;
+    }
+
     titleSlider.innerHTML = titleText[currentIndex];
 })
 
 prevTitle.addEventListener('click', function () {
     currentIndex--;
+
+    if (currentIndex > titleText.length - 1) {
+        currentIndex = 0;
+    }
     titleSlider.innerHTML = titleText[currentIndex];
-})
-
-const textSlider = document.querySelector('.slider');
-
-textSlider.innerHTML = slideTexts[0];
-
-const nextTexts = document.getElementById('next');
-const prevTexts = document.getElementById('prev');
-
-nextTexts.addEventListener('click', function () {
-    currentIndex++;   
-    slideTexts.innerHTML = slideTexts[currentIndex];
-})
-
-prevTexts.addEventListener('click', function () {
-    currentIndex--;
-    slideTexts.innerHTML = slideTexts[currentIndex];
 })
